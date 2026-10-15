@@ -2,7 +2,7 @@
 
 function getBooks()
 {
-  return [
+  $books = [
     [
       "id" => 1,
       "title" => "Laskar Pelangi",
@@ -44,20 +44,24 @@ function getBooks()
       "authors" => ["Pramoedya Ananta Toer", "Sapardi Djoko Damono"],
     ],
   ];
+
+  return $books;
 }
 
 function getBook()
 {
-  return [
+
+  $book = [
     "id" => 5,
     "title" => "Antologi Rasa Nusantara",
     "isbn" => "978-602-1234-56-7",
     "year" => 2021,
     "stock" => 4,
-    "category" => "Fiksi",
     "category_id" => 1,
+    "category" => "Fiksi",
     "description" => "Kumpulan puisi dan cerita pendek dari berbagai penulis Nusantara.",
+    "author_ids" => [4, 5],
     "authors" => ["Pramoedya Ananta Toer", "Sapardi Djoko Damono"],
-    "author_ids" => [4,5],
   ];
+  return $book;
 }

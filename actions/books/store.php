@@ -1,14 +1,6 @@
 <?php
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['store'])) {
-  if (isset($_POST['title'], $_POST['isbn'], $_POST['year'], $_POST['stock'], $_POST['category_id'], $_POST['description'])) {
-    echo "Data buku berhasil ditambahkan (simulasi)";
-    echo "<pre>";
+if (isset($_POST['store']) && $_SERVER['REQUEST_METHOD'] === "POST") {
     print_r($_POST);
-    echo "</pre>";
-  } else {
-    echo "Data tidak lengkap";
-  }
-} else {
-  echo "Akses tidak valid";
 }
+
+?>

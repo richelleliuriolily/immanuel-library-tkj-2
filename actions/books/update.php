@@ -1,14 +1,15 @@
 <?php
+if (isset($_POST['update']) && $_SERVER['REQUEST_METHOD'] === "POST") {
+    $id = $_POST['id'];
+    $title = $_POST['title'];
+    $isbn = $_POST['isbn'];
+    $year = $_POST['year'];
+    $stock = $_POST['stock'];
+    $categoryId = $_POST['category_id'];
+    $description = $_POST['description'];
+    $authorIds = isset($_POST['author_ids']) ? $_POST['author_ids'] : [];
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
-  if (isset($_POST['id'], $_POST['title'], $_POST['isbn'], $_POST['year'], $_POST['stock'], $_POST['category_id'], $_POST['description'])) {
-    echo "Data buku berhasil diubah (simulasi)";
-    echo "<pre>";
     print_r($_POST);
-    echo "</pre>";
-  } else {
-    echo "Data tidak lengkap";
-  }
-} else {
-  echo "Akses tidak valid";
 }
+
+?>

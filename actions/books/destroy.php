@@ -1,7 +1,8 @@
 <?php
+if (isset($_GET['id']) && $_SERVER['REQUEST_METHOD'] === "GET") {
+    $id = $_GET['id'];
 
-if (isset($_GET['id'])) {
-  echo "Data buku dengan id " . $_GET['id'] . " berhasil dihapus (simulasi)";
-} else {
-  echo "ID buku tidak ditemukan";
+    echo "Buku dengan id " . htmlspecialchars($id) . " berhasil dihapus.";
 }
+
+?>
